@@ -1,0 +1,20 @@
+{
+  "name": "xhashtag-staking-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "pool": "node server/pool.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@project-serum/anchor": "^0.18.0",
+    "@project-serum/serum": "^0.13.60",
+    "@solana/spl-token": "^0.1.8",
+    "express": "^4.17.1"
+  }
+}
