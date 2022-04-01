@@ -10,10 +10,10 @@ const path = require('path');
 const os = require("os");
 
 const idl = JSON.parse(fs.readFileSync(path.resolve('./idl/seeded_staking.json')));
-const programID = new PublicKey("STKqapQ5XexMHQ4G5dDwsGMJmGNNwPKFN4FPWyub7tt");
+const programID = new PublicKey("65fMP12hbWs8FrHxBcwYkjQwL2SVv43EisrMvUpWJdkN");
 console.log(programID, "program")
 
-const walletKeyData = JSON.parse(fs.readFileSync('./wallet/AzurEAAY66JwU6Rxntp4hmSryetBFuS8hvBHRSR4Tdcp.json'));
+const walletKeyData = JSON.parse(fs.readFileSync('./wallet/7JgtUXaz8gRthhuruNjR91vmzWxoDKTapNaLn7duPtEU.json'));
 const walletKeypair = Keypair.fromSecretKey(new Uint8Array(walletKeyData));
 const wallet = new anchor.Wallet(walletKeypair);
 
@@ -37,10 +37,10 @@ let program = new anchor.Program(idl, programID, provider);
 
 async function initializePool() {
     //THIS IS TOKEN ID
-    stakingMintPubkey = new PublicKey('seedEDBqu63tJ7PFqvcbwvThrYUkQeqT6NLf81kLibs');
+    stakingMintPubkey = new PublicKey('GXnuqN2B2Zaqr8Xi5qqAcentjfTztFSnXwh41su7SqkM');
 
     poolKeypair = anchor.web3.Keypair.generate();
-    
+
     console.log(poolKeypair)
     console.log(poolKeypair.publicKey.toBase58())
     console.log(poolKeypair.secretKey)
